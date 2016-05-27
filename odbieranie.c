@@ -28,7 +28,7 @@ int main(){
 	printf("blad msgget");	
 return -1;
 	}else{
-	printf("sukces msgget %d /n", msqid);
+	printf("sukces msgget %d \n", msqid);
 	}
 
 	if(msgrcv(msqid, &rcv, MSGSZ, 1, 0) <0){
