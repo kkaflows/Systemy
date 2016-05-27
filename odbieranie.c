@@ -37,13 +37,13 @@ return -1;
 	};
 
 	dl = strlen(rcv.mtext);
-	int ileLiter= 0;
+	int ileZnakow= 0;
 
 	//jak nie zaczyna sie od znaku to nie ma sensu sprawdzania dalej
 	if(((rcv.mtext[0] >= 65) && (rcv.mtext[0] <= 90)) || ((rcv.mtext[0] >= 97) && (rcv.mtext[0] <= 122))){
-		ileZnakow+;
+		ileZnakow++;
 	for(int i = 1; i<dl; i++){
-	if(((rcv.mtext[i] >= 32) && (rcv.mtext[i] <= 126))  {
+	if((rcv.mtext[i] >= 32) && (rcv.mtext[i] <= 126))  {
 		ileZnakow++;
 		}
 	}
