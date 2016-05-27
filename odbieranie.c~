@@ -28,7 +28,7 @@ int main(){
 	printf("blad msgget");	
 return -1;
 	}else{
-	printf("sukces msgget %d /n", msqid);
+	printf("sukces msgget %d \n", msqid);
 	}
 
 	if(msgrcv(msqid, &rcv, MSGSZ, 1, 0) <0){
@@ -43,7 +43,7 @@ return -1;
 	if(((rcv.mtext[0] >= 65) && (rcv.mtext[0] <= 90)) || ((rcv.mtext[0] >= 97) && (rcv.mtext[0] <= 122))){
 		ileLiter++;
 	for(int i = 1; i<dl; i++){
-	if(((rcv.mtext[i] >= 65) && (rcv.mtext[i] <= 90)) || ((rcv.mtext[i] >= 97) && (rcv.mtext[i] <= 122))) {
+	if(((rcv.mtext[i] >= 32) && (rcv.mtext[i] <= 126))  {
 		ileLiter++;
 		}
 	}

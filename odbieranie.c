@@ -41,16 +41,16 @@ return -1;
 
 	//jak nie zaczyna sie od znaku to nie ma sensu sprawdzania dalej
 	if(((rcv.mtext[0] >= 65) && (rcv.mtext[0] <= 90)) || ((rcv.mtext[0] >= 97) && (rcv.mtext[0] <= 122))){
-		ileLiter++;
+		ileZnakow+;
 	for(int i = 1; i<dl; i++){
-	if(((rcv.mtext[i] >= 65) && (rcv.mtext[i] <= 90)) || ((rcv.mtext[i] >= 97) && (rcv.mtext[i] <= 122))) {
-		ileLiter++;
+	if(((rcv.mtext[i] >= 32) && (rcv.mtext[i] <= 126))  {
+		ileZnakow++;
 		}
 	}
 }else{
 	printf("komunikat nie jest poprawny: nie zaczyna sie od litery");
 }
-	if(dl == ileLiter){
+	if(dl == ileZnakow){
 	printf("komunikat jest poprawny i brzmi: %s", rcv.mtext);
 	}
 	
