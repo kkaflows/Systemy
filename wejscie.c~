@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-
+#define MSGSZ	128
 
 struct msgbuf{
 	long mtype;
