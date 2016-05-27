@@ -20,6 +20,8 @@ int main(){
 	int msqid;
 	key_t key;
 	size_t dl;
+
+	key = 3241;
 	
 	struct msgbuf msg;
 	msg.mtype = 1;
