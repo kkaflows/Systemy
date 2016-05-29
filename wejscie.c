@@ -20,14 +20,15 @@ int main(){
 	int msqid;
 	key_t key;
 	size_t dl;
-
+	
 	key = 3241;
 	
 	struct msgbuf msg;
 	msg.mtype = 1;
 	
-	//strcpy(msg.mtext, "test");	
+	
 	scanf("%[^\n]",msg.mtext);
+	
 	printf("%s", msg.mtext);
 	dl = strlen(msg.mtext) + 1;
 

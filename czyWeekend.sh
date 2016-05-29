@@ -1,6 +1,6 @@
 #!/bin/bash
 ./wejscie
-if [[ $(date +%u) -gt 6 ]] ; then
+if [[ $(date +%u) -gt 5 ]] ; then
     echo 'jest weekend, nie mozesz uruchomic programu'
     exit
 	else
